@@ -3,18 +3,9 @@
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-
-var _axios = require('axios');
-
-var _axios2 = _interopRequireDefault(_axios);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var Dogecoin = {
-    getBalance: function getBalance(address) {
-        return _axios2.default.get('https://dogechain.info/api/v1/address/balance/${address}');
-    }
+exports.GetBalance = GetBalance;
+function GetBalance(address) {
+    // `https://dogechain.info/api/v1/address/balance/${address}`
+    return '3000';
 };
-
-exports.default = Dogecoin;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpYi9kb2dlY29pbi5qcyJdLCJuYW1lcyI6WyJEb2dlY29pbiIsImdldEJhbGFuY2UiLCJhZGRyZXNzIiwiZ2V0Il0sIm1hcHBpbmdzIjoiOzs7Ozs7QUFBQTs7Ozs7O0FBRUEsSUFBTUEsV0FBVztBQUNiQyxjQURhLHNCQUNGQyxPQURFLEVBQ087QUFDaEIsZUFBTyxnQkFBTUMsR0FBTixDQUFVLDBEQUFWLENBQVA7QUFDSDtBQUhZLENBQWpCOztrQkFNZUgsUSIsImZpbGUiOiJkb2dlY29pbi5qcyIsInNvdXJjZVJvb3QiOiIvVXNlcnMvUFJJTlpFL3dhdGNoZG9nZSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XG5cbmNvbnN0IERvZ2Vjb2luID0ge1xuICAgIGdldEJhbGFuY2UoYWRkcmVzcykge1xuICAgICAgICByZXR1cm4gYXhpb3MuZ2V0KCdodHRwczovL2RvZ2VjaGFpbi5pbmZvL2FwaS92MS9hZGRyZXNzL2JhbGFuY2UvJHthZGRyZXNzfScpXG4gICAgfVxufVxuXG5leHBvcnQgZGVmYXVsdCBEb2dlY29pbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImxpYi9kb2dlY29pbi5qcyJdLCJuYW1lcyI6WyJHZXRCYWxhbmNlIiwiYWRkcmVzcyJdLCJtYXBwaW5ncyI6Ijs7Ozs7UUFBZ0JBLFUsR0FBQUEsVTtBQUFULFNBQVNBLFVBQVQsQ0FBb0JDLE9BQXBCLEVBQTZCO0FBQ2hDO0FBQ0EsV0FBTyxNQUFQO0FBQ0giLCJmaWxlIjoiZG9nZWNvaW4uanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL1BSSU5aRS93YXRjaGRvZ2UiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZnVuY3Rpb24gR2V0QmFsYW5jZShhZGRyZXNzKSB7XG4gICAgLy8gYGh0dHBzOi8vZG9nZWNoYWluLmluZm8vYXBpL3YxL2FkZHJlc3MvYmFsYW5jZS8ke2FkZHJlc3N9YFxuICAgIHJldHVybiAnMzAwMCc7XG59OyJdfQ==
