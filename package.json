@@ -1,0 +1,30 @@
+{
+  "name": "watchdoge",
+  "version": "1.0.0",
+  "description": "Dogecoin Wallet Watcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dokepon2/watchdoge"
+  },
+  "keywords": [
+    "Dogecoin",
+    "Doge",
+    "crypto",
+    "currency",
+    "blockchain"
+  ],
+  "author": "Mr.Dokepon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dokepon2/watchdoge/issues"
+  },
+  "homepage": "https://github.com/dokepon2/watchdoge",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
