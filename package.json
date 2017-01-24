@@ -4,6 +4,7 @@
   "description": "Dogecoin Wallet Watcher",
   "main": "index.js",
   "scripts": {
+    "start": "next",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,7 +25,7 @@
   },
   "homepage": "https://github.com/dokepon2/watchdoge",
   "dependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "axios": "^0.15.3",
+    "next": "^1.2.3"
   }
 }
