@@ -20,7 +20,7 @@ describe("Dogechain.info API : ", () => {
         })
     });
 
-    describe("Get balance by Address", () => {
+    describe("Get balance from wallet", () => {
         it("Data return as Object", () => {
             // Get Balance from Dogecoin address 
             return GetBalance(address)
