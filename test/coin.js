@@ -1,22 +1,40 @@
-import { expect } from "chai";
 import { GetBalance } from '../lib/dogecoin'; // Use Dogechain libary
-const address = 'DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn';
+import { expect } from 'chai';
+
+const address = 'DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn'; // Dogecoin wallet address
 
 describe("Dogechain.info API : ", () => {
 
     describe("Connect to API ", () => {
-        it("Response 200 OK", () => {
-        //    let balance = request.get(`https://dogechain.info/api/v1/address/balance/${address}`);
-            
-        });
+        it("Dogecoin wallet address", () => {
+            expect(address).to.be.a('string');
+        })
+
+        it("Connect is success : 1 ", () => {
+            // Get Balance from Dogecoin address 
+            return GetBalance(address)
+                .then(function (data) {
+                    expect(data).to.be.a('object');
+                })
+
+        })
     });
 
     describe("Get balance by Address", () => {
-        it("Balance return to string", () => {
+        it("Data return as Object", () => {
             // Get Balance from Dogecoin address 
-            let res = GetBalance(address);
-            expect(res).to.be.a('string');
-        });
+            return GetBalance(address)
+                .then(function (data) {
+                    expect(data).to.be.a('object');
+                })
+        })
+        it("Retrieve balance", () => {
+            // Get Balance from Dogecoin address 
+            return GetBalance(address)
+                .then(function (data) {
+                    expect(data.success).to.equal(1);
+                })
+        })
 
     });
 
