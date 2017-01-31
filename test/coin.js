@@ -6,8 +6,8 @@ const address = 'DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn'; // Dogecoin wallet address
 describe("Dogechain.info API : ", () => {
 
     describe("Connect to API ", () => {
-        it("Dogecoin wallet address", () => {
-            expect(address).to.be.a('string');
+        it("Dogecoin wallet address is correct", () => {
+            expect(address).to.equal('DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn');
         })
 
         it("Connect is success : 1 ", () => {
