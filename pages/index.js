@@ -18,6 +18,7 @@ export default class extends React.Component {
         try {
             let dogecoin = await GetBalance(address);
             console.log(`Balance is ${dogecoin.balance}`);
+            this.setState({error: null});
             this.setState({balance: dogecoin.balance});
         } catch (e) {
             this.setState({error: e.toString()});
