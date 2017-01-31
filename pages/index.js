@@ -1,24 +1,35 @@
 import React from 'react';
 import Head from 'next/head';
 import AddressInput from '../components/input';
-// import axios from 'axios';
+
 import { style } from 'next/css';
-import { Dogecoin } from '../lib/dogecoin';
+import { GetBalance } from '../lib/dogecoin';
 
 export default class extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
-    }
-    
-    inputAddress(address) {
-        this.setState({ address: address })
+        this.state = {
+            balance: null,
+            error: null
+        }
     }
 
-    static async getBalance () {
-        let address = this.state.address;
-        const dogecoin = await Dogecoin(address);
-        this.setState({ dogecoin: res })
+    async inputAddress(address) {
+        try {
+            let dogecoin = await GetBalance(address);
+            console.log(`Balance is ${dogecoin.balance}`);
+            this.setState({balance: dogecoin.balance});
+        } catch (e) {
+            this.setState({error: e.toString()});
+        }
+    }
+
+    renderBalance() {
+        if (!this.state.error) {
+            return <p>{this.state.balance}</p>
+        } else {
+            return <p>Sorry Address not found. !!</p>
+        }
     }
 
     render() {
@@ -37,7 +48,7 @@ export default class extends React.Component {
                     />
                 </div>
                 <div className={style(css.balance)}>
-                    {this.state.address}
+                    {this.renderBalance()}
                 </div>
             </div>
         )
