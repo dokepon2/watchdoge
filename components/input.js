@@ -26,7 +26,7 @@ export default class AddressInput extends React.Component {
     render(){
 		return(
 			<form onSubmit={this.handleAddress.bind(this)}>
-				<input type="text" placeholder="Enter your Dogecoin wallet address" ref="address" />
+				<input type="text" placeholder="Enter Dogecoin address" ref="address" />
 				<button>Get Balance</button>
 				{this.renderError()}
 			</form>

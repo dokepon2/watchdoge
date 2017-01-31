@@ -27,7 +27,9 @@ export default class extends React.Component {
 
     renderBalance() {
         if (!this.state.error) {
-            return <p>{this.state.balance}</p>
+            if (this.state.balance){ 
+                return <p>{this.state.balance} in your wallet</p>
+            }            
         } else {
             return <p>Sorry Address not found. !!</p>
         }
