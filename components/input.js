@@ -1,19 +1,12 @@
 import React from 'react';
 
-export default class AddressInput extends React.Component {
+
+export default class Input extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
             error: null
-        }
-    }
-
-    renderError() {
-        if (!this.state.error) {
-            return null
-        }
-        return <div style={{color: 'red'}}>{this.state.error}</div>
-    }
+        }}
 
     handleAddress(event) {
         event.preventDefault();
@@ -27,8 +20,7 @@ export default class AddressInput extends React.Component {
 		return(
 			<form onSubmit={this.handleAddress.bind(this)}>
 				<input type="text" placeholder="Enter Dogecoin address" ref="address" />
-				<button>Get Balance</button>
-				{this.renderError()}
+				<button type="submit">Get Balance</button>
 			</form>
 		)
 	}

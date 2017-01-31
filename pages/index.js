@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import AddressInput from '../components/input';
+import Input from '../components/input';
 
 import { style } from 'next/css';
 import { GetBalance } from '../lib/dogecoin';
@@ -47,7 +47,7 @@ export default class extends React.Component {
                     <img src="/static/doge.png" />
                     <h1>Watch Doge 1.0</h1>
                     <p>eg. DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn</p>
-                    <AddressInput
+                    <Input
                         inputAddress={this.inputAddress.bind(this)}
                     />
                 </div>
