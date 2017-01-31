@@ -46,6 +46,7 @@ export default class extends React.Component {
                 <div className={style(css.container)}>
                     <img src="/static/doge.png" />
                     <h1>Watch Doge 1.0</h1>
+                    <p>eg. DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn</p>
                     <AddressInput
                         inputAddress={this.inputAddress.bind(this)}
                     />
