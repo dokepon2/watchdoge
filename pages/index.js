@@ -9,21 +9,32 @@ import { GetBalance } from '../lib/dogecoin'
 export default class extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            balance: null,
-            error: null,
-            loaded: false,
+        this.state = {       
+            loading: false
         }
     }
 
     async inputAddress(address) {
+        this.setState({loading: true});
+        this.setState({balance: null});
+        this.setState({error: null});
         try {
             let dogecoin = await GetBalance(address);
-            console.log(`Balance is ${dogecoin.balance}`);
-            this.setState({error: null});
-            this.setState({balance: dogecoin.balance});
+            if ( dogecoin ) {
+                console.log(`Balance is ${dogecoin.balance}`);
+                this.setState({error: null});
+                this.setState({balance: dogecoin.balance});
+                this.setState({loading: false});
+            }
         } catch (e) {
             this.setState({error: e.toString()});
+            this.setState({loading: false});
+        }
+    }
+
+    loadingState() {
+        if (this.state.loading) {
+            return 'Loading ...'
         }
     }
 
@@ -55,8 +66,7 @@ export default class extends React.Component {
                     
                 </div>
                 <div className={style(css.balance)}>
-                    
-                    {this.renderBalance()}
+                    {this.loadingState()} {this.renderBalance()}
                 </div>
             </div>
         )
