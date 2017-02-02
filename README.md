@@ -1,6 +1,6 @@
 # Watch Doge
 
-Get Dogecoin balance from cold wallet address
+Get Dogecoin balance from cold storage address
 
 Unit test
  - Dogechain.info API

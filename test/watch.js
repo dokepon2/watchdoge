@@ -1,8 +1,8 @@
-import React from 'react';
-import { expect } from 'chai';
-import { mount, shallow } from 'enzyme';
+import React from 'react'
+import { expect } from 'chai'
+import { mount, shallow } from 'enzyme'
 
-import Input from '../components/input';
+import Input from '../components/input'
 
 describe('Balance', () => {
     describe('Input from', () => {

@@ -1,16 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import Input from '../components/input';
+import React from 'react'
+import Head from 'next/head'
+import { style } from 'next/css'
 
-import { style } from 'next/css';
-import { GetBalance } from '../lib/dogecoin';
+import FormAddress from '../components/form-address'
+
+import { GetBalance } from '../lib/dogecoin'
 
 export default class extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
             balance: null,
-            error: null
+            error: null,
+            loaded: false,
         }
     }
 
@@ -47,11 +49,13 @@ export default class extends React.Component {
                     <img src="/static/doge.png" />
                     <h1>Watch Doge 1.0</h1>
                     <p>eg. DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn</p>
-                    <Input
+                    <FormAddress
                         inputAddress={this.inputAddress.bind(this)}
                     />
+                    
                 </div>
                 <div className={style(css.balance)}>
+                    
                     {this.renderBalance()}
                 </div>
             </div>

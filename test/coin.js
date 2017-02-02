@@ -1,5 +1,5 @@
-import { GetBalance } from '../lib/dogecoin'; // Use Dogechain libary
-import { expect } from 'chai';
+import { GetBalance } from '../lib/dogecoin' // Use Dogechain libary
+import { expect } from 'chai'
 
 const address = 'DK8KStpVX9JQkz8dnE8ZFF1cMiXYTPfVMn'; // Dogecoin wallet address
 

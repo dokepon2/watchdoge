@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
 
-export default class Input extends React.Component {
+export default class FormAddress extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
